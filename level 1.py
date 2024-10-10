@@ -1,3 +1,6 @@
+
+n = input("Enter the input: ")
+
 # Question: 1
 # Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
 # between 2000 and 3200 (both included).
@@ -104,12 +107,120 @@
 # The output of the program should be:
 # 18,22,24
 
-C = 50
-H = 30
-D = input("Enter the values: ")
-D_list = D.split(",")
+# C = 50
+# H = 30
+# D = input("Enter the values: ")
+# D_list = D.split(",")
+#
+# for i in range(0,len(D_list)):
+#     Q = (2 * C * int(D_list[i])/H)**0.5
+#     D_list[i] = round(Q)
+# print(D_list)
 
-for i in range(0,len(D_list)):
-    Q = (2 * C * int(D_list[i])/H)**0.5
-    D_list[i] = round(Q)
-print(D_list)
+# Question 7
+# Level 2
+#
+# Question:
+# Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+# Note: i=0,1.., X-1; j=0,1,¡­Y-1.
+# Example
+# Suppose the following inputs are given to the program:
+# 3,5
+# Then, the output of the program should be:
+# [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+
+# n = input("Enter two numbers: ")
+# n = n.split(",")
+#
+# I = int(n[0])
+# J = int(n[1])
+# column = [[0 for i in range(0,J)] for i in range(0,I)]
+#
+# for i in range(0,I):
+#     for j in range(0,J):
+#         column[i][j] = i*j
+#
+# print(column)
+
+
+# Question 8
+# Level 2
+#
+# Question:
+# Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+# Suppose the following input is supplied to the program:
+# without,hello,bag,world
+# Then, the output should be:
+# bag,hello,without,world
+
+
+# n = input("Enter the words: ")
+# n = n.split(',')
+# n.sort()
+# print(n)
+
+# Question 9
+# Level 2
+#
+# Question£º
+# Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+# Suppose the following input is supplied to the program:
+# Hello world
+# Practice makes perfect
+# Then, the output should be:
+# HELLO WORLD
+# PRACTICE MAKES PERFECT
+
+# n = input("Enter the words: ")
+# print(n.upper())
+
+# Question 10
+# Level 2
+#
+# Question:
+# Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+# Suppose the following input is supplied to the program:
+# hello world and practice makes perfect and hello world again
+# Then, the output should be:
+# again and hello makes perfect practice world
+
+# n = n.split(" ")
+#
+# for i in range(0,len(n)-1):
+#     try:
+#         temp = n[i]
+#         n.remove(n[i])
+#
+#         if temp in n:
+#             pass
+#         else:
+#             n.append(temp)
+#     except:
+#         break
+# print(sorted(n))
+
+# Question 11
+# Level 2
+#
+# Question:
+# Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+# Example:
+# 0100,0011,1010,1001
+# Then the output should be:
+# 1010
+# Notes: Assume the data is input by console.
+#
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+
+
+n = n.split(",")
+result = []
+for i in range(0,len(n)):
+    n[i] = int(n[i],2)
+
+    if n[i]%5 == 0:
+
+        result.append(bin(n[i])[2:])
+
+print(result)
