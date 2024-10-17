@@ -214,13 +214,13 @@ n = input("Enter the input: ")
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 
 
-n = n.split(",")
-result = []
-for i in range(0,len(n)):
-    n[i] = int(n[i],2)
-
-    if n[i]%5 == 0:
-
-        result.append(bin(n[i])[2:])
-
-print(result)
+# n = n.split(",")
+# result = []
+# for i in range(0,len(n)):
+#     n[i] = int(n[i],2)
+#
+#     if n[i]%5 == 0:
+#
+#         result.append(bin(n[i])[2:])
+#
+# print(result)
